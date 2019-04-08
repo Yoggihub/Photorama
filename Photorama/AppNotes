@@ -1,0 +1,9 @@
+https://www.flickr.com/services/apps/create/noncommercial/?
+https://api.flickr.com/services/rest?nojsoncallback=1&api_key=a6d819499131071f158fd740860a5a88&method=flickr.interestingness.getList&format=json&extras=url_h,date_taken
+
+
+Key
+94d66af34bab5414254a854a3c9ef72f
+
+Secret:
+6380843f918f7c31
