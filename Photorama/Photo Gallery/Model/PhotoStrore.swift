@@ -8,10 +8,6 @@ enum ImageResult {
     case failure(Error)
 }
 
-enum PhotoError: Error {
-    case imageCreationError
-}
-
 enum PhotosResult {
     case success([Photo])
     case failure(Error)
@@ -108,7 +104,7 @@ class PhotoStore {
             if data == nil {
                 return .failure(error!)
             } else {
-                return .failure(PhotoError.imageCreationError)
+                return .failure(error!)
             }
         }
         return .success(image)
