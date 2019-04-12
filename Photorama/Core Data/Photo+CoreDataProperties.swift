@@ -2,7 +2,7 @@
 //  Photo+CoreDataProperties.swift
 //  Photorama
 //
-//  Created by SHARMA, YOGESH [AG-Contractor/1000] on 4/8/19.
+//  Created by SHARMA, YOGESH [AG-Contractor/1000] on 4/11/19.
 //  Copyright © 2019 SHARMA, YOGESH [AG-Contractor/1000]. All rights reserved.
 //
 //
@@ -17,9 +17,27 @@ extension Photo {
         return NSFetchRequest<Photo>(entityName: "Photo")
     }
 
-    @NSManaged public var photoId: String?
-    @NSManaged public var title: String?
     @NSManaged public var dateTaken: NSDate?
+    @NSManaged public var photoId: String?
     @NSManaged public var remoteURL: NSURL?
+    @NSManaged public var title: String?
+    @NSManaged public var tags: NSSet?
+
+}
+
+// MARK: Generated accessors for tags
+extension Photo {
+
+    @objc(addTagsObject:)
+    @NSManaged public func addToTags(_ value: Tag)
+
+    @objc(removeTagsObject:)
+    @NSManaged public func removeFromTags(_ value: Tag)
+
+    @objc(addTags:)
+    @NSManaged public func addToTags(_ values: NSSet)
+
+    @objc(removeTags:)
+    @NSManaged public func removeFromTags(_ values: NSSet)
 
 }

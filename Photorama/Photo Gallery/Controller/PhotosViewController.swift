@@ -5,6 +5,7 @@ class PhotosViewController: UIViewController {
     
     var photoDataSource = [Photo]()
     var store: PhotoStore!
+   // var store = PhotoStore()
 
     @IBOutlet var collectionView: UICollectionView!
     
